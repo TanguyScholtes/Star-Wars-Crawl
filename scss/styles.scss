@@ -1,0 +1,29 @@
+/* ------------ External Imports ------------ */
+@import "normalize";
+
+/*------- Variables -------*/
+@import "variables";
+
+/* ------- Colors ------- */
+@import "colors";
+
+/* ------- Fonts ------- */
+@import "fonts";
+
+/* ------- Animations ------- */
+@import "animations";
+
+/* ------- General Styles -------*/
+body{
+    font-size: $base-text-size;
+    font-family: "Open Sans", sans-serif;
+}
+
+a{
+    color: $link;
+    transition: color 500ms ease;
+    &:hover, &:focus{
+        color: $link-hover;
+        transition: color 500ms ease;
+    }
+}
