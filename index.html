@@ -22,7 +22,7 @@
 
     <div id="wrapper">
         <div class="fadeOut">
-            <p>A long time ago in a galaxy far, far away....</p>
+            <p>A long time ago in a galaxy far,<br /> far away....</p>
         </div>
 
         <div class="shrink">
@@ -42,5 +42,17 @@
             <p class="justified">Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up the way the nigger talks. Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'? </p>
         </div>
     </div>
+
+    <div id="soundControl" class="soundControl-wrapper">
+        <p class="soundControl">
+            <span class="mute"></span> <input class="volume" type="range" min="0" max"100" value="30">
+        </p>
+    </div>
+
+    <audio id="sound" class="sound" volume="0.3" autoplay loop>
+        <source id="source" src="audio/MainTitle.mp3" type="audio/mpeg">
+    </audio>
+
+    <script type="text/javascript" src="js/audioVolume.js"></script>
 </body>
 </html>
