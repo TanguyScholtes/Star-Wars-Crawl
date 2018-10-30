@@ -149,6 +149,7 @@ html {
     transform-origin: 50% 100%;
     transform: translateY(10000px) rotateX(30deg) scale3d(1, 1, 1);
     animation: crawl 15s linear 5800ms infinite;
+
 }
 
 @keyframes crawl {
@@ -201,4 +202,33 @@ html {
         transform: scale(0,0);
     }
     
+}
+
+.soundControl {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0.5em 0.25em 0.25em 0.5em;
+  z-index: 1;
+  line-height: 21px;
+}
+
+.mute, .volume{
+    vertical-align: middle;
+}
+
+.mute {
+  display: inline-block;
+  content: "";
+  width: 21px;
+  height: 21px;
+  background-image: url("../img/sound.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 100;
+}
+
+.volume {
+    width: 200px;
 }
