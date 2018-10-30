@@ -81,6 +81,10 @@ body {
 
 #wrapper{
     text-align: center;
+    height: 100%;
+    position: relative;
+    perspective-origin: 50% 100;
+    perspective: 100px;
 }
 
 #site-title {
@@ -141,19 +145,35 @@ html {
 
 .crawl {
   position: relative;
-  bottom: 0;
-  transform-origin: bottom center;
-  animation: crawl 10s linear infinite;
-    transform: translateZ(0) rotate3d(1,0,0,45deg) scale3d(1, 1, 1);
+  transform-origin: 50% 100%;
+  animation: crawl 25s linear infinite;
+    transform: translate3d(0, 0, 0) rotate3d(1,0,0,45deg) scale3d(1, 1, 1);
 }
 
 @keyframes crawl {
     0% {
-    bottom: 0;
-    transform: translateZ(0) rotate3d(1,0,0,45deg) scale3d(1, 1, 1);
+    transform: translate3d(0, -100px, 0) rotate3d(1,0,0,45deg) scale3d(1, 1, 1);
   }
     100% {
-    bottom: 100%;
-    transform: translateZ(-2500px) rotate3d(1,0,0,45deg) scale3d(0, 0, 0);
+    transform: translate3d(0, -50%, -1080px) rotate3d(1,0,0,45deg) scale3d(0, 0, 0);
+  }
+}
+
+.fadeOut{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    text-align: left;
+    animation: fadeOut 100ms linear 5s;
+}
+
+@keyframes fadeOut {
+    0% {
+    opacity: 100%;
+  }
+    100% {
+    opacity: 0%;
   }
 }
