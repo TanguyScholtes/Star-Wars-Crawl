@@ -1,0 +1,34 @@
+html{
+    position: relative;
+    min-height: 100%;
+}
+
+body{
+    height: 100%;
+}
+
+.stars, .twinkling{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    display: block;
+    width: 100%;
+}
+
+.stars {
+    background: #000 url('../img/stars.png') repeat top center;
+    z-index: -2;
+}
+
+.twinkling{
+    background: transparent url('../img/twinkling.png') repeat top center;
+    z-index: -1;
+    -moz-animation: twinkle 200s linear infinite;
+    -ms-animation: twinkle 200s linear infinite;
+    -o-animation: twinkle 200s linear infinite;
+    -webkit-animation: twinkle 200s linear infinite;
+    animation: twinkle 200s linear infinite;
+}

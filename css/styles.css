@@ -510,6 +510,51 @@ table {
 }
 
 /* ------- Animations ------- */
+@-webkit-keyframes twinkle {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+@-moz-keyframes twinkle {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+@-ms-keyframes twinkle {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+@-o-keyframes twinkle {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+@keyframes twinkle {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
 /* ------- General Styles -------*/
 body {
   font-size: 18px;
@@ -524,4 +569,39 @@ a {
 a:hover, a:focus {
   color: #1673ff;
   transition: color 500ms ease;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+.stars, .twinkling {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  display: block;
+  width: 100%;
+}
+
+.stars {
+  background: #000 url("../img/stars.png") repeat top center;
+  z-index: -2;
+}
+
+.twinkling {
+  background: transparent url("../img/twinkling.png") repeat top center;
+  z-index: -1;
+  -moz-animation: twinkle 200s linear infinite;
+  -ms-animation: twinkle 200s linear infinite;
+  -o-animation: twinkle 200s linear infinite;
+  -webkit-animation: twinkle 200s linear infinite;
+  animation: twinkle 200s linear infinite;
 }
