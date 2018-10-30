@@ -141,18 +141,19 @@ html {
 
 .crawl {
   position: relative;
-  top: 999px;
-  transform-origin: 50% 100%;
-  animation: crawl 60s linear;
+  top: 9999px;
+  transform-origin: bottom center;
+  animation: crawl 60s linear infinite;
+    transform:  rotate3d(1,0,0,45deg);
 }
 
 @keyframes crawl {
     0% {
-    top: -100px;
-    transform: rotateX(20deg)  translateZ(0);
+    
+    transform:  translateZ(0);
   }
     100% {
-    top: -6000px;
-    transform: rotateX(25deg) translateZ(-2500px);
+    top: -600px;
+    transform: translateZ(-2500px);
   }
 }
