@@ -509,6 +509,20 @@ table {
   src: url("../fonts/opensans/OpenSans-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "News Gothic";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/news-gothic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Universal Light";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/universallight-regular.ttf") format("truetype");
+}
+
 /* ------- Animations ------- */
 @-webkit-keyframes twinkle {
   from {
@@ -558,7 +572,18 @@ table {
 /* ------- General Styles -------*/
 body {
   font-size: 18px;
+  font-family: "News Gothic", sans-serif;
+  font-weight: bold;
+}
+
+#site-title {
+  font-family: "Universal Light", sans-serif;
+  font-weight: lighter;
+}
+
+.fadeOut p {
   font-family: "Open Sans", sans-serif;
+  font-weight: normal;
 }
 
 a {
