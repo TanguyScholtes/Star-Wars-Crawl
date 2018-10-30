@@ -83,7 +83,7 @@ body {
 
 .fadeOut p {
   font-family: "Open Sans", sans-serif;
- color:rgb(255,220,8);
+ color:rgb(3,117,140);
   font-weight: normal;
 
 }
@@ -105,7 +105,7 @@ html {
 
 body {
   height: 100%;
-
+    color:rgb(255,220,8);
 }
 
 .stars, .twinkling {
@@ -136,9 +136,9 @@ body {
 
 .crawl {
   position: relative;
-  top: 99999px;
+  top: 999px;
   transform-origin: 50% 100%;
-  animation: crawls 60s linear;
+  animation: crawl 60s linear;
 }
 
 @keyframes crawl {
