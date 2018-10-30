@@ -79,17 +79,17 @@ body {
     overflow: hidden;
 }
 
+#site-title {
+  font-family: "Universal Light", sans-serif;
+  font-weight: lighter;
+}
+
 #wrapper{
     text-align: center;
     height: 100%;
     position: relative;
     perspective-origin: 50% 100;
-    perspective: 100px;
-}
-
-#site-title {
-  font-family: "Universal Light", sans-serif;
-  font-weight: lighter;
+    perspective: 300px;
 }
 
 .justified{
@@ -144,36 +144,46 @@ html {
 }
 
 .crawl {
-  position: relative;
-  transform-origin: 50% 100%;
-  animation: crawl 25s linear infinite;
-    transform: translate3d(0, 0, 0) rotate3d(1,0,0,45deg) scale3d(1, 1, 1);
+    position: relative;
+    transform-origin: 50% 100%;
+    transform: translateY(10000px) rotateX(30deg) scale3d(1, 1, 1);
+    animation: crawl 15s linear 3500ms infinite;
 }
 
 @keyframes crawl {
     0% {
-    transform: translate3d(0, -100px, 0) rotate3d(1,0,0,45deg) scale3d(1, 1, 1);
+        opacity: 1;
+    transform: translateY(250%) rotateX(30deg) scale3d(1.5, 1, 1);
   }
     100% {
-    transform: translate3d(0, -50%, -1080px) rotate3d(1,0,0,45deg) scale3d(0, 0, 0);
+        opacity: 0;
+    transform: translateY(-1080px) rotateX(30deg) scale3d(0, 0, 0);
   }
 }
 
 .fadeOut{
     position: absolute;
-    top: 50%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 3em;
     text-align: left;
-    animation: fadeOut 100ms linear 5s;
+    animation: fadeOut 500ms ease-out 3s both;
 }
 
 @keyframes fadeOut {
     0% {
-    opacity: 100%;
+    opacity: 1;
   }
     100% {
-    opacity: 0%;
+    opacity: 0;
   }
+}
+
+.shrink{
+    position: absolute;
+    //top: 75%;
+    top: 500%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
