@@ -74,7 +74,7 @@ body {
   font-size: 18px;
   font-family: "News Gothic", sans-serif;
   font-weight: bold;
-    height: 100%;
+    height: 100vh;
     color:rgb(255,220,8);
     overflow: hidden;
 }
@@ -88,13 +88,13 @@ body {
     text-align: center;
     height: 100%;
     position: relative;
-    perspective-origin: 50% 100;
+    perspective-origin: center top;
     perspective: 300px;
 }
 
 .justified{
     text-align: justify;
-    
+
 }
 
 .fadeOut p {
@@ -145,27 +145,28 @@ html {
 }
 
 .crawl {
+    width: 900px;
+    font-size: 1.5em;
+    margin: 0 auto;
     position: relative;
-    transform-origin: 50% 100%;
-    transform: translateY(10000px) rotateX(30deg) scale3d(1, 1, 1);
-    animation: crawl 15s linear 5800ms infinite;
+    transform-origin: center top;
+    transform: translateY(-10000px) rotateX(30deg) scale3d(1, 1, 1);
+    animation: crawl 25s linear 5800ms infinite;
 }
 
 @keyframes crawl {
     0% {
-        opacity: 1;
-    transform: translateY(250%) rotateX(30deg) scale3d(1.5, 1, 1);
+    transform: translateY(100vh) rotateX(30deg) scale3d(1.5, 1, 1);
   }
     100% {
-        opacity: 0;
-    transform: translateY(-1080px) rotateX(30deg) scale3d(0, 0, 0);
+    transform: translateY(-100vh) rotateX(30deg) scale3d(0, 0, 0);
   }
 }
 
 .fadeOut{
     position: absolute;
-    top: 75%;
-    left: 50%;
+    top: 50vh;
+    left: 50vw;
     transform: translate(-50%, -50%);
     font-size: 3em;
     text-align: left;
@@ -183,22 +184,22 @@ html {
 
 .shrink{
     position: absolute;
-    top: 500%;
-    left: 1000%;
-    
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
     animation: shrink 3s linear 3.5s;
 }
 
 @keyframes shrink{
     0%{
-        top: 50%;
-        justify-content: center;
-;        transform: scale(6, 6);
+        top: 50vh;
+        transform-origin: center center;
+        transform: scale(6, 6);
     }
     100%{
-        top: 50%;
-        justify-content: center;
+        top: 50vh;
+        transform-origin: center center;
         transform: scale(0,0);
     }
-    
+
 }
