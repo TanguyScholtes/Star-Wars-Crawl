@@ -94,6 +94,7 @@ body {
 
 .justified{
     text-align: justify;
+    
 }
 
 .fadeOut p {
@@ -147,7 +148,7 @@ html {
     position: relative;
     transform-origin: 50% 100%;
     transform: translateY(10000px) rotateX(30deg) scale3d(1, 1, 1);
-    animation: crawl 15s linear 3500ms infinite;
+    animation: crawl 15s linear 5800ms infinite;
 }
 
 @keyframes crawl {
@@ -182,8 +183,22 @@ html {
 
 .shrink{
     position: absolute;
-    //top: 75%;
     top: 500%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 1000%;
+    
+    animation: shrink 3s linear 3.5s;
+}
+
+@keyframes shrink{
+    0%{
+        top: 50%;
+        justify-content: center;
+;        transform: scale(6, 6);
+    }
+    100%{
+        top: 50%;
+        justify-content: center;
+        transform: scale(0,0);
+    }
+    
 }
