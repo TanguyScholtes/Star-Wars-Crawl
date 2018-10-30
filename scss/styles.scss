@@ -1,6 +1,3 @@
-/* ------------ External Imports ------------ */
-@import "normalize";
-
 /*------- Variables -------*/
 @import "variables";
 
@@ -16,7 +13,18 @@
 /* ------- General Styles -------*/
 body{
     font-size: $base-text-size;
+    font-family: "News Gothic", sans-serif;
+    font-weight: bold;
+}
+
+#site-title{
+    font-family: "Universal Light", sans-serif;
+    font-weight: lighter;
+}
+
+.fadeOut p{
     font-family: "Open Sans", sans-serif;
+    font-weight: normal;
 }
 
 a{
