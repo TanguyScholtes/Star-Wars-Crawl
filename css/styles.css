@@ -79,16 +79,23 @@ body {
     overflow: hidden;
 }
 
+#wrapper{
+    text-align: center;
+}
+
 #site-title {
   font-family: "Universal Light", sans-serif;
   font-weight: lighter;
+}
+
+.justified{
+    text-align: justify;
 }
 
 .fadeOut p {
   font-family: "Open Sans", sans-serif;
  color:rgb(3,117,140);
   font-weight: normal;
-
 }
 
 a {
@@ -105,8 +112,6 @@ html {
   position: relative;
   min-height: 100%;
 }
-
-
 
 .stars, .twinkling {
   position: absolute;
@@ -146,7 +151,7 @@ html {
     top: -100px;
     transform: rotateX(20deg)  translateZ(0);
   }
-    100% { 
+    100% {
     top: -6000px;
     transform: rotateX(25deg) translateZ(-2500px);
   }
