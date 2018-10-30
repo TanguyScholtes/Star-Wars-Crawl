@@ -210,6 +210,7 @@ html {
   background-image: url("../img/sound.png");
   background-position: center;
   background-repeat: no-repeat;
+  z-index: 100;
 }
 
 .volume {
