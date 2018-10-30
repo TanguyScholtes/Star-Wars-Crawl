@@ -74,6 +74,9 @@ body {
   font-size: 18px;
   font-family: "News Gothic", sans-serif;
   font-weight: bold;
+    height: 100%;
+    color:rgb(255,220,8);
+    overflow: hidden;
 }
 
 #site-title {
@@ -103,10 +106,7 @@ html {
   min-height: 100%;
 }
 
-body {
-  height: 100%;
-    color:rgb(255,220,8);
-}
+
 
 .stars, .twinkling {
   position: absolute;
