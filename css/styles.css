@@ -71,11 +71,11 @@
 
 /* ------- General Styles -------*/
 body {
-  font-size: 18px;
-  font-family: "News Gothic", sans-serif;
-  font-weight: bold;
-    height: 100vh;
-    color:rgb(255,220,8);
+    font-size: 18px;
+    font-family: "News Gothic", sans-serif;
+    font-weight: bold;
+    height: 100%;
+    color: rgb(255,220,8);
     overflow: hidden;
 }
 
@@ -84,89 +84,79 @@ body {
   font-weight: lighter;
 }
 
+.justified{
+    text-align: justify;
+}
+
+.fadeOut p {
+    font-family: "Open Sans", sans-serif;
+    color: rgb(3,117,140);
+    font-weight: normal;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.stars, .twinkling {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    display: block;
+    width: 100%;
+}
+
+.stars {
+    background: #000 url("../img/stars.png") repeat top center;
+    z-index: -2;
+}
+
+.twinkling {
+    background: transparent url("../img/twinkling.png") repeat top center;
+    z-index: -1;
+    -moz-animation: twinkle 200s linear infinite;
+    -ms-animation: twinkle 200s linear infinite;
+    -o-animation: twinkle 200s linear infinite;
+    -webkit-animation: twinkle 200s linear infinite;
+    animation: twinkle 200s linear infinite;
+}
+
 #wrapper{
     text-align: center;
     height: 100%;
+    width: 100%;
     position: relative;
     perspective-origin: center top;
     perspective: 300px;
 }
 
-.justified{
-    text-align: justify;
-
-}
-
-.fadeOut p {
-  font-family: "Open Sans", sans-serif;
- color:rgb(3,117,140);
-  font-weight: normal;
-}
-
-a {
-  color: #003c95;
-  transition: color 500ms ease;
-}
-
-a:hover, a:focus {
-  color: #1673ff;
-  transition: color 500ms ease;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-.stars, .twinkling {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  display: block;
-  width: 100%;
-}
-
-.stars {
-  background: #000 url("../img/stars.png") repeat top center;
-  z-index: -2;
-}
-
-.twinkling {
-  background: transparent url("../img/twinkling.png") repeat top center;
-  z-index: -1;
-  -moz-animation: twinkle 200s linear infinite;
-  -ms-animation: twinkle 200s linear infinite;
-  -o-animation: twinkle 200s linear infinite;
-  -webkit-animation: twinkle 200s linear infinite;
-  animation: twinkle 200s linear infinite;
-}
-
 .crawl {
-    width: 900px;
+    max-width: 900px;
     font-size: 1.5em;
     margin: 0 auto;
     position: relative;
     transform-origin: center top;
     transform: translateY(-10000px) rotateX(20deg) scale3d(1, 1, 1);
-    animation: crawl 60s linear 5800ms infinite;
+    animation: crawl 60s linear 5500ms infinite;
 }
 
 @keyframes crawl {
     0% {
-    transform: translateY(100vh) rotateX(20deg) scale3d(1.5, 1, 1);
+    transform: translateY(100%) rotateX(20deg) scale3d(1.5, 1, 1);
   }
     100% {
-    transform: translateY(-100vh) rotateX(20deg) scale3d(0, 0, 0);
+    transform: translateY(-100%) rotateX(20deg) scale3d(0, 0, 0);
   }
 }
 
 .fadeOut{
     position: absolute;
-    top: 50vh;
-    left: 50vw;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     font-size: 3em;
     text-align: left;
@@ -188,8 +178,8 @@ html {
     margin: -163px 0 0 -163px;
     position: absolute;
     opacity: 0;
-    top: 50vh;
-    left: 50vw;
+    top: 50%;
+    left: 50%;
     transform-origin: center center;
     transform: scale(6);
     animation: shrink 3s linear 3.5s;
