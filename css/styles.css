@@ -151,7 +151,7 @@ html {
     position: relative;
     transform-origin: center top;
     transform: translateY(-10000px) rotateX(30deg) scale3d(1, 1, 1);
-    animation: crawl 25s linear 5800ms infinite;
+    animation: crawl 45s linear 5800ms infinite;
 }
 
 @keyframes crawl {
@@ -183,23 +183,54 @@ html {
 }
 
 .shrink{
+    width: 326px;
+    height: 326px;
+    margin: -163px 0 0 -163px;
     position: absolute;
+    opacity: 0;
     top: 50vh;
     left: 50vw;
-    transform: translate(-50%, -50%);
+    transform-origin: center center;
+    transform: scale(6);
     animation: shrink 3s linear 3.5s;
 }
 
 @keyframes shrink{
     0%{
-        top: 50vh;
-        transform-origin: center center;
-        transform: scale(6, 6);
+        opacity: 1;
+        transform: scale(6);
     }
     100%{
-        top: 50vh;
-        transform-origin: center center;
-        transform: scale(0,0);
+        opacity: 1;
+        transform: scale(0);
     }
 
+}
+
+.soundControl {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0.5em 0.25em 0.25em 0.5em;
+  z-index: 1;
+  line-height: 21px;
+}
+
+.mute, .volume{
+    vertical-align: middle;
+}
+
+.mute {
+  display: inline-block;
+  content: "";
+  width: 21px;
+  height: 21px;
+  background-image: url("../img/sound.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.volume {
+    width: 200px;
 }
