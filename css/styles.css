@@ -150,16 +150,16 @@ html {
     margin: 0 auto;
     position: relative;
     transform-origin: center top;
-    transform: translateY(-10000px) rotateX(30deg) scale3d(1, 1, 1);
+    transform: translateY(-10000px) rotateX(20deg) scale3d(1, 1, 1);
     animation: crawl 45s linear 5800ms infinite;
 }
 
 @keyframes crawl {
     0% {
-    transform: translateY(100vh) rotateX(30deg) scale3d(1.5, 1, 1);
+    transform: translateY(100vh) rotateX(20deg) scale3d(1.5, 1, 1);
   }
     100% {
-    transform: translateY(-100vh) rotateX(30deg) scale3d(0, 0, 0);
+    transform: translateY(-100vh) rotateX(20deg) scale3d(0, 0, 0);
   }
 }
 
