@@ -151,7 +151,7 @@ html {
     position: relative;
     transform-origin: center top;
     transform: translateY(-10000px) rotateX(20deg) scale3d(1, 1, 1);
-    animation: crawl 45s linear 5800ms infinite;
+    animation: crawl 50s linear 5800ms infinite;
 }
 
 @keyframes crawl {
